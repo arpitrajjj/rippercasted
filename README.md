@@ -47,8 +47,10 @@ cmake --build build -j
 
 ## Running tests
 
+Run CTest from the build directory for compatibility with CMake 3.16 and newer:
+
 ```bash
-ctest --test-dir build --output-on-failure
+cmake -E chdir build ctest --output-on-failure
 ```
 
 ## Consuming in another project
